@@ -1,0 +1,405 @@
+/* Definição das Cores do Desafio */
+:root {
+    --primary: #2c73d2;
+    /* Azul biblioteca */
+    --secondary: #26A69A;
+    /* Verde suave */
+    --bg: #F5F5F5;
+    /* Cinza muito claro */
+    --text-main: #333333;
+    /* Cinza escuro */
+    --text-sec: #666666;
+    /* Cinza médio */
+    --border: #ddd;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Cabeçalho Superior --- */
+header {
+    background-color: var(--primary);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    /* Isso empurra o botão para a direita */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 22px;
+}
+
+/* Botão Cadastrar (Canto Superior) */
+.btn-top {
+    background-color: var(--secondary);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.btn-top:hover {
+    filter: brightness(90%);
+}
+
+/* --- Container Principal --- */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Barra de Busca --- */
+.search-box {
+    margin-bottom: 25px;
+    display: flex;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    /* Ocupa todo espaço disponível */
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-box button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-clear {
+    display: flex;
+    align-items: center;
+    color: var(--text-sec);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* --- Tabela --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: var(--primary);
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-main);
+}
+
+table tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Badge da Categoria */
+.tag-categoria {
+    background-color: #eef2f7;
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.empty-msg {
+    text-align: center;
+    padding: 30px;
+    color: var(--text-sec);
+}
+
+
+
+
+
+
+
+
+
+
+/* TELA DE CADASTRO */
+
+
+/* ==================== BOTÃO VOLTAR ==================== */
+.btn-voltar {
+    background-color: #26A69A;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(38, 166, 154, 0.3);
+}
+
+.btn-voltar:hover {
+    background-color: #1e8e82;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(38, 166, 154, 0.4);
+}
+
+/* ==================== CARD DE CADASTRO ==================== */
+.cadastro-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    max-width: 550px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-top: 5px solid #2C73D2;
+}
+
+.cadastro-icon {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cadastro-card h2 {
+    color: #2C73D2;
+    font-size: 26px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.cadastro-subtitulo {
+    color: #666666;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* ==================== FORMULÁRIO DE CADASTRO ==================== */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #333333;
+    font-weight: 600;
+}
+
+.label-icon {
+    font-size: 18px;
+}
+
+.obrigatorio {
+    color: #E57373;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #F5F5F5;
+    color: #333333;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #26A69A;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2C73D2;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(44, 115, 210, 0.1);
+}
+
+.form-group input::placeholder {
+    color: #999999;
+}
+
+/* ==================== LINHA DO FORMULÁRIO ==================== */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* ==================== MENSAGENS ==================== */
+.mensagem {
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.mensagem-icon {
+    font-size: 22px;
+}
+
+.mensagem-texto {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.mensagem.sucesso {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 2px solid #81C784;
+}
+
+.mensagem.erro {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 2px solid #E57373;
+}
+
+/* ==================== BOTÕES DO FORMULÁRIO ==================== */
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-cadastrar-form {
+    flex: 2;
+    background-color: #2C73D2;
+    color: white;
+    padding: 16px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-cadastrar-form:hover {
+    background-color: #1e5bb5;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(44, 115, 210, 0.35);
+}
+
+.btn-limpar-form {
+    flex: 1;
+    background-color: white;
+    color: #666666;
+    padding: 16px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-limpar-form:hover {
+    background-color: #F5F5F5;
+    border-color: #26A69A;
+    color: #26A69A;
+}
+
+/* ==================== DICA DO FORMULÁRIO ==================== */
+.form-dica {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 15px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    border-left: 4px solid #26A69A;
+}
+
+.form-dica span {
+    font-size: 20px;
+}
+
+.form-dica p {
+    font-size: 13px;
+    color: #666666;
+    margin: 0;
+}
+
+/* ==================== RESPONSIVO CADASTRO ==================== */
+@media (max-width: 768px) {
+    .cadastro-card {
+        padding: 25px 20px;
+        margin: 0 10px;
+        border-radius: 12px;
+    }
+
+    .cadastro-card h2 {
+        font-size: 22px;
+    }
+
+    .cadastro-icon {
+        font-size: 40px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .btn-cadastrar-form,
+    .btn-limpar-form {
+        width: 100%;
+    }
+}
